@@ -1,0 +1,2 @@
+../source/gpio.c:17:6:gpio_init	8	static
+../source/gpio.c:39:6:Init_TPM	16	static

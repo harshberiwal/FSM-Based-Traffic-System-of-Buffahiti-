@@ -1,0 +1,4 @@
+../source/touch.c:21:6:Touch_Init	8	static
+../source/touch.c:38:5:Touch_Poll	16	static
+../source/touch.c:55:6:TSI0_IRQHandler	8	static
+../source/touch.c:64:9:check_touch_status	8	static
