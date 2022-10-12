@@ -23,7 +23,7 @@
 #define PORT_A 			(uint32_t)(1 <<9)
 
 /*
- * Initializes pins as GPIO output
+ * Initializes pins as GPIO intput at PORTA pin 13
  *
  * Parameters:
  *   None
