@@ -1,13 +1,1 @@
-D:\CU BOULDER\Coursework\Sem 1 - PES\Assignment_4\CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
-../source/test.c:95:5:main	8	static
-../source/test.c:120:6:initialize_SysTick	8	static
-../source/test.c:128:6:SysTick_Handler	8	static
-../source/test.c:134:12:now	8	static
-../source/test.c:139:6:reset_timer	8	static
-../source/test.c:144:6:state_check	16	static
-../source/test.c:174:6:Signal_Red_on	16	static
-../source/test.c:194:6:Signal_Green_on	16	static
-../source/test.c:214:6:Signal_Blue_on	16	static
-../source/test.c:240:6:Signal_Yellow_on	16	static
-../source/test.c:260:5:get_curr_val	48	static
-../source/test.c:270:10:update_last_val	8	static
+../source/test.c:21:5:main	8	static

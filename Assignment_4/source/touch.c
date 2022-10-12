@@ -1,6 +1,6 @@
 /*
- * touchc includes all the definitions of functions declared in Touch.h
- * This include Touch_Init() and Touch_Poll()
+ * touch.c includes all the definitions of functions declared in Touch.h
+ * This include Touch_Init() and Touch_Poll() and its IRQHandler.
  *
  * Author: Harsh Beriwal
  * IDE Used: MCUXpresso IDE v11.6.0 [Build 8187] [2022-07-13]
@@ -15,9 +15,12 @@
 #include "board.h"
 #include "MKL25Z4.h"
 
-//static void TSI0_IRQHandler();
+#define TOUCH_OFFSET 	460
+#define TOUCH_THRESHOLD 20
+#define MAX_16 			(0xFFFF)
 
 uint8_t touch_pressed = 0;
+
 void Touch_Init()
 {
     //***************Enable clock for TSI PortB 16 and 17***************************
@@ -35,7 +38,7 @@ void Touch_Init()
     TSI0->GENCS |= TSI_GENCS_TSIEN_MASK;
 }
 
-int Touch_Poll(void)
+bool Touch_Poll(void)
 {
 	int scanned_val;
     //************************Using channel 10 of The TSI***************************
@@ -45,30 +48,17 @@ int Touch_Poll(void)
     TSI0->DATA |= TSI_DATA_SWTS_MASK;
 
     //******************************Taking the Value********************************
-    scanned_val = (uint16_t)((TSI0 -> DATA) & (0xffff));
+    scanned_val = (uint16_t)((TSI0 -> DATA) & MAX_16);
 
     //*********************EOSF flag set after getting the value********************
     TSI0->GENCS |= TSI_GENCS_EOSF_MASK;
-    return scanned_val;
+
+    if((scanned_val - TOUCH_OFFSET) > TOUCH_THRESHOLD)
+    	return true;
+    else
+    	return false;
 }
 
-void TSI0_IRQHandler(void)
-{
-	//uint32_t channel = (TSI0_DATA & TSI_DATA_TSICH_MASK) >> TSI_DATA_TSICH_SHIFT;
 
-	TSI0->GENCS |= TSI_GENCS_EOSF_MASK; // Clear End of Scan Flag
-	touch_pressed = 1;
-	Touch_Poll();
-}
-
-uint8_t check_touch_status()
-{
-	if(touch_pressed) {
-		touch_pressed =0;
-		return 1;
-	}
-	else
-		return 0;
-}
 
 

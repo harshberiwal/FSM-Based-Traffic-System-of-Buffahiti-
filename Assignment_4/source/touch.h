@@ -5,7 +5,7 @@
  * Author: Harsh Beriwal
  * IDE Used: MCUXpresso IDE v11.6.0 [Build 8187] [2022-07-13]
  *
- * Github Link: https://github.com/harshberiwal/PES_Assignment_3
+ * Github Link: https://github.com/harshberiwal/PES_Assignment_4
  *
  * No leveraged code or files
  *
@@ -27,7 +27,6 @@
 #define ELEC_CHARGE		7
 #define CHANNEL 		(10u)
 
-uint8_t check_touch_status();
 
 /*
  * Scans the capacitive Touch Slider and returns value corresponding to
@@ -37,9 +36,9 @@ uint8_t check_touch_status();
  *   None
  *
  * Returns:
- *   Scanned Value between 0 to 65535
+ *   If Touched the touch Sluider, it returns true, otherwise it returns false
  */
-int Touch_Poll(void);
+bool Touch_Poll(void);
 
 /*
  * Initializes the capacitive Touch Slider and the GENCS and DATA register
@@ -52,7 +51,6 @@ int Touch_Poll(void);
  *   None
  */
 void Touch_Init();
-
 
 
 

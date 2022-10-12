@@ -1,6 +1,5 @@
 /*
- * test.h includes all the declarations of functions used in test.c
- * The details of each function is given below.
+ * test.h includes all the libraries needed for test.c to work
  *
  * Author: Harsh Beriwal
  * IDE Used: MCUXpresso IDE v11.6.0 [Build 8187] [2022-07-13]
@@ -13,6 +12,7 @@
 #ifndef TEST_H_
 #define TEST_H_
 
+
 #include <stdio.h>
 #include "board.h"
 #include "peripherals.h"
@@ -22,9 +22,9 @@
 #include "fsl_debug_console.h"
 #include "touch.h"
 #include "log.h"
-#include "gpio.h"
-
-
+#include "system.h"
+#include "pwm.h"
+#include "state_machine.h"
 
 #endif /* TEST_H_ */
 

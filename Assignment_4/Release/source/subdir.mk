@@ -4,28 +4,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../source/gpio.c \
-../source/led_sequence.c \
 ../source/mtb.c \
+../source/pwm.c \
 ../source/semihost_hardfault.c \
+../source/state_machine.c \
 ../source/system.c \
 ../source/test.c \
 ../source/touch.c 
 
 C_DEPS += \
-./source/gpio.d \
-./source/led_sequence.d \
 ./source/mtb.d \
+./source/pwm.d \
 ./source/semihost_hardfault.d \
+./source/state_machine.d \
 ./source/system.d \
 ./source/test.d \
 ./source/touch.d 
 
 OBJS += \
-./source/gpio.o \
-./source/led_sequence.o \
 ./source/mtb.o \
+./source/pwm.o \
 ./source/semihost_hardfault.o \
+./source/state_machine.o \
 ./source/system.o \
 ./source/test.o \
 ./source/touch.o 
@@ -43,7 +43,7 @@ source/%.o: ../source/%.c source/subdir.mk
 clean: clean-source
 
 clean-source:
-	-$(RM) ./source/gpio.d ./source/gpio.o ./source/led_sequence.d ./source/led_sequence.o ./source/mtb.d ./source/mtb.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/system.d ./source/system.o ./source/test.d ./source/test.o ./source/touch.d ./source/touch.o
+	-$(RM) ./source/mtb.d ./source/mtb.o ./source/pwm.d ./source/pwm.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/state_machine.d ./source/state_machine.o ./source/system.d ./source/system.o ./source/test.d ./source/test.o ./source/touch.d ./source/touch.o
 
 .PHONY: clean-source
 
