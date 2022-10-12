@@ -1,8 +1,8 @@
 ../source/state_machine.c:87:6:state_check	16	static
-../source/state_machine.c:126:5:get_curr_val	48	static
-../source/state_machine.c:139:10:update_last_val	8	static
-../source/state_machine.c:144:6:transitions	16	static
-../source/state_machine.c:163:6:Signal_Red_on	16	static
-../source/state_machine.c:168:6:Signal_Green_on	16	static
-../source/state_machine.c:173:6:Signal_Yellow_on	16	static
-../source/state_machine.c:178:6:Signal_Blue_on	16	static
+../source/state_machine.c:129:5:get_curr_val	48	static
+../source/state_machine.c:142:10:update_last_val	8	static
+../source/state_machine.c:147:6:transitions	16	static
+../source/state_machine.c:166:6:Signal_Red_on	16	static
+../source/state_machine.c:171:6:Signal_Green_on	16	static
+../source/state_machine.c:176:6:Signal_Yellow_on	16	static
+../source/state_machine.c:181:6:Signal_Blue_on	16	static

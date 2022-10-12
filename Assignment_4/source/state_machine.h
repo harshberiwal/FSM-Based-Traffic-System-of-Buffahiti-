@@ -28,6 +28,7 @@
 #include "pwm.h"
 #include "system.h"
 #include "log.h"
+#include "gpio.h"
 
 /*
  * Table driven State machine for checking events based on Timeout or Button Pressed

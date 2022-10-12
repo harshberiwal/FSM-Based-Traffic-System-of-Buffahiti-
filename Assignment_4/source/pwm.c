@@ -19,7 +19,6 @@
 
 #include <PWM.h>
 
-#define MUX_GPIO 		(uint32_t)(0x00000100)
 #define FIRST_CHANNEL   0
 #define SECOND_CHANNEL  1
 #define RESET 			0
@@ -28,28 +27,6 @@
 #define DIVIDE_BY_64 	6
 #define TPM0_SET		4
 #define TPM2_SET		3
-
-void gpio_init()
-{
-	//****************Turning on Clock for GPIOs**************************
-	SIM -> SCGC5 |= PORT_A;
-	SIM -> SCGC5 |= PORT_B;
-
-	//****************Configuring Pins as GPIO****************************
-	PORTB -> PCR[RED] 	= MUX_GPIO;
-	PORTB -> PCR[GREEN] = MUX_GPIO;
-	PORTD -> PCR[BLUE]	= MUX_GPIO;
-
-	//****************Configuring Pins as output**************************
-	GPIOB -> PDDR |= red_LED;
-	GPIOB -> PDDR |= green_LED;
-	GPIOD -> PDDR |= blue_LED;
-
-	//****************Initializing Pins to Low****************************
-	GPIOB -> PDOR |= red_LED;
-	GPIOB -> PDOR |= green_LED;
-	GPIOD -> PDOR |= blue_LED;
-}
 
 void Init_TPM(uint16_t period)
 {
@@ -97,3 +74,5 @@ void Init_TPM(uint16_t period)
 	TPM0 -> SC |= TPM_SC_CMOD(MODE_LPTPM_INC);
 	TPM2 -> SC |= TPM_SC_CMOD(MODE_LPTPM_INC);
 }
+
+

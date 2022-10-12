@@ -13,7 +13,6 @@
  *
 */
 
-
 #include "system.h"
 
 #define SYSTICK_CONTROL 3
@@ -33,17 +32,19 @@ void initialize_SysTick()
 	SysTick->CTRL = SYSTICK_CONTROL;
 }
 
+//*****************Returns the time code is running since boot*********************
 ticktime_t now()
 {
 	return (total_interrupt*INT_TIME);
 }
 
+//*******Resets the timer VAL register and timeout_timer for the next callback*****
 void reset_timer()
 {
 	SysTick -> VAL = RESET;
 	Timeout_Time =RESET;
 }
-
+//**********Function to get the Timer Value from the current Systick Tick**********
 ticktime_t get_timer()
 {
 	return Timeout_Time;

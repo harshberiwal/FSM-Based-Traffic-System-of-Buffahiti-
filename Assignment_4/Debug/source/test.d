@@ -18,7 +18,8 @@ source/test.o source/test.d: ../source/test.c ../source/test.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\board/clock_config.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\CMSIS/MKL25Z4.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\utilities/fsl_debug_console.h \
- ../source/touch.h ../source/log.h ../source/gpio.h
+ ../source/touch.h ../source/log.h ../source/system.h ../source/pwm.h \
+ ../source/state_machine.h ../source/gpio.h
 ../source/test.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\board/board.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\board/clock_config.h:
@@ -41,4 +42,7 @@ D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\CMSIS/MKL25Z4.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\utilities/fsl_debug_console.h:
 ../source/touch.h:
 ../source/log.h:
+../source/system.h:
+../source/pwm.h:
+../source/state_machine.h:
 ../source/gpio.h:

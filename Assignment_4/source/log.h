@@ -12,17 +12,17 @@
 #ifndef LOG_H_
 #define LOG_H_
 
-#define TRANSITION_TIME	16
+#define TRANSITION_TIME	16                        //1 sec
 #ifdef NDEBUG
-#define STOP_TIME 		(320 + TRANSITION_TIME)
-#define GO_TIME   		(320 + TRANSITION_TIME)
-#define WARNING_TIME 	(80 + TRANSITION_TIME)
+#define STOP_TIME 		(320 + TRANSITION_TIME)	  //21 sec
+#define GO_TIME   		(320 + TRANSITION_TIME)	  //21 sec
+#define WARNING_TIME 	(80 + TRANSITION_TIME)	  //6 sec
 #define LOG(...)
 
 #else
-#define STOP_TIME 		(80 + TRANSITION_TIME)
-#define GO_TIME   		(80 + TRANSITION_TIME)
-#define WARNING_TIME 	(48 + TRANSITION_TIME)
+#define STOP_TIME 		(80 + TRANSITION_TIME)	  //6 sec
+#define GO_TIME   		(80 + TRANSITION_TIME)	  //6 sec
+#define WARNING_TIME 	(48 + TRANSITION_TIME)	  //4 sec
 #define LOG PRINTF
 #endif
 

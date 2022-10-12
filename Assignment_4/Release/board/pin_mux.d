@@ -11,6 +11,7 @@ board/pin_mux.o board/pin_mux.d: ../board/pin_mux.c \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_clock.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_common.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_port.h \
+ D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_gpio.h \
  ../board/pin_mux.h
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_common.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\CMSIS/fsl_device_registers.h:
@@ -24,4 +25,5 @@ D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\CMSIS/MKL25Z4_features.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_clock.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_common.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_port.h:
+D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_gpio.h:
 ../board/pin_mux.h:

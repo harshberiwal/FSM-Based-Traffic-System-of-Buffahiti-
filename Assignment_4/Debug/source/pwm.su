@@ -1,2 +1,1 @@
-../source/pwm.c:32:6:gpio_init	8	static
-../source/pwm.c:54:6:Init_TPM	16	static
+../source/pwm.c:31:6:Init_TPM	16	static

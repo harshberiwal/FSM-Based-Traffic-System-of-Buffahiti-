@@ -1,4 +1,5 @@
-source/system.o source/system.d: ../source/system.c ../source/system.h \
+source/pwm.o source/pwm.d: ../source/pwm.c \
+ D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\source/PWM.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\board/board.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\board/clock_config.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_common.h \
@@ -18,7 +19,7 @@ source/system.o source/system.d: ../source/system.c ../source/system.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\board/clock_config.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\CMSIS/MKL25Z4.h \
  D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\utilities/fsl_debug_console.h
-../source/system.h:
+D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\source/PWM.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\board/board.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\board/clock_config.h:
 D:\CU\ BOULDER\Coursework\Sem\ 1\ -\ PES\Assignment_4\drivers/fsl_common.h:

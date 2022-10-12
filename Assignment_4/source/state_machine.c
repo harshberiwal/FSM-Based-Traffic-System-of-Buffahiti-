@@ -81,7 +81,7 @@ int last_state =0, state =0, new_state =0;
 int touch_check =0;
 uint32_t timeout_time =0, past_time =0,time_now=0;
 uint32_t curr_val_R =0, curr_val_G =0, curr_val_B =0;
-bool touch_status= false ;
+bool touch_status= false,button_status =false;
 uint32_t last_val = STOP_VAL;
 
 void state_check(uint16_t timeout_time_elapsed)
@@ -90,6 +90,7 @@ void state_check(uint16_t timeout_time_elapsed)
 
 	//******************************CHECKING TOUCH STATUS**********************************
 	touch_status = Touch_Poll();
+	button_status = button_check();
 	if(timeout_time_elapsed == state_array[state].time_elapsed) {
 		//**************************CHECKING CURRENT TIME**********************************
 		time_now = now();
@@ -103,7 +104,7 @@ void state_check(uint16_t timeout_time_elapsed)
 		//************************RESEETING TIME FOR RE_CALLBACK***************************
 		reset_timer();
 	}
-	else if(touch_status && (state != CROSSWALK)) {
+	else if((touch_status || button_status) && (state != CROSSWALK)) {
 		//***********************CHANGING STATE TO CROSSWALK*******************************
 		new_state = state_array[state].BUTTON_PRESSED;
 		last_val  = update_last_val();
@@ -112,11 +113,13 @@ void state_check(uint16_t timeout_time_elapsed)
 		LOG("Button Pressed Detected at %d msec\n\r", time_now);
 		state = new_state;
 		touch_status = false;
+		button_status = false;
 		//************************RESEETING TIME FOR RE_CALLBACK***************************
 		reset_timer();
 	}
 	else{
 		//********************IGNORING SWITCH PRESS DURING CROSSWALK***********************
+		button_status = false;
 		touch_status = false;
 	}
 	//********************CALLING FUNC POINTER ACC. TO CURRENT STATE***********************

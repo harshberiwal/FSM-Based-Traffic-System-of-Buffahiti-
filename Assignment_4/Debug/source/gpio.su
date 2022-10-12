@@ -1,2 +1,5 @@
-../source/gpio.c:17:6:gpio_init	8	static
-../source/gpio.c:39:6:Init_TPM	16	static
+D:\CU BOULDER\Coursework\Sem 1 - PES\Assignment_4\CMSIS/core_cm0plus.h:745:22:NVIC_EnableIRQ	16	static
+D:\CU BOULDER\Coursework\Sem 1 - PES\Assignment_4\CMSIS/core_cm0plus.h:791:22:NVIC_ClearPendingIRQ	16	static
+../source/gpio.c:28:6:gpio_init	8	static
+../source/gpio.c:46:6:PORTA_IRQHandler	8	static
+../source/gpio.c:52:6:button_check	8	static

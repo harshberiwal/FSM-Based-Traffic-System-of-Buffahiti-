@@ -1,6 +1,6 @@
 D:\CU BOULDER\Coursework\Sem 1 - PES\Assignment_4\CMSIS/core_cm0plus.h:804:22:NVIC_SetPriority	24	static
-../source/system.c:27:6:initialize_SysTick	8	static
+../source/system.c:26:6:initialize_SysTick	8	static
 ../source/system.c:36:12:now	8	static
-../source/system.c:41:6:reset_timer	8	static
-../source/system.c:47:12:get_timer	8	static
-../source/system.c:52:6:SysTick_Handler	8	static
+../source/system.c:42:6:reset_timer	8	static
+../source/system.c:48:12:get_timer	8	static
+../source/system.c:53:6:SysTick_Handler	8	static

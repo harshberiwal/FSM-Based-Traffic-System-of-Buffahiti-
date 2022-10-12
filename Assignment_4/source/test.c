@@ -31,7 +31,7 @@ int main(void) {
 #endif
     //********************Init TPM FOR Transitions************************
     Init_TPM(PERIOD);
-	//gpio_init();
+	gpio_init();
     //******************Init System Timer for Timing**********************
 	initialize_SysTick();
 

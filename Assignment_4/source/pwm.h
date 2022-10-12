@@ -1,5 +1,5 @@
 /*
- * pwm.h includes all the declarations given for TPM and GPIO.
+ * pwm.h includes all the declarations given for TPM.
  * This include Init_TPM() and initializes all the peripherals used
  * for transitions and PWM in the State_Machine.
  *
@@ -16,8 +16,8 @@
  * accordingly for the application. Different Prescaler and Clock were used along with
  * initializing different Gated Registers and setting their bits for Port B.
  */
-#ifndef GPIO_H_
-#define GPIO_H_
+#ifndef PWM_H_
+#define PWM_H_
 
 #include <stdio.h>
 #include "board.h"
@@ -33,7 +33,7 @@
 #define RED 			18
 #define GREEN 			19
 #define BLUE 			1
-#define PORT_A 			(uint32_t)(1 <<10)
+#define PORT_A 			(uint32_t)(1 <<9)
 #define PORT_B 			(uint32_t)(1 <<12)
 
 /*
@@ -46,15 +46,5 @@
  *   None
  */
 void Init_TPM(uint16_t period);
-/*
- * Initializes pins as GPIO output
- *
- * Parameters:
- *   None
- *
- * Returns:
- *   None
- */
-void gpio_init();
 
-#endif /* GPIO_H_ */
+#endif
